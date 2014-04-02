@@ -1,13 +1,10 @@
  <?
 
-/* true для тестирования, в боевом режиме - $debug=false */ 
 $debug=false;
 
 
 
 
-
-/* данные для соединения с сервером WebAsyst */
 
 $hostname = 'localhost';/* адрес сервера - имя домена или IP-адрес, локально - localhost*/
 $username = 'root'; /* имя пользователя для подключения к базе */ 
@@ -16,7 +13,6 @@ $db_name = 'webasyst309';/* имя базы данных */
 $newstable = 'SC_news_table';/* имя таблицы новостей, по умолчанию SC_news_table */
 
 
-/* данные для соединения с сервером Joomla 1 */
 $joomla[]=array(
 'enabled' => true,/* для отключения установить параметр в false */
 'server_id' => '1',/* уникальный идентификатор сервера */
@@ -28,17 +24,6 @@ $joomla[]=array(
 'cat_id'=>'64'/* id категории, из которой будут импортироваться новости - Joomla >Материалы > Менеджер категорий > ID (в таблице справа) */
 );
 
-/* данные для соединения с сервером Joomla 2*/
-$joomla[]=array(
-'enabled' => true,
-'server_id' => '2',
-'hostname' => 'localhost',
-'username' => 'joomla15',
-'password' => '84n67h4',
-'db_name' => 'joomla15',
-'db_prefix' => 'j25',
-'cat_id'=>'66'
-);
 
 
 
