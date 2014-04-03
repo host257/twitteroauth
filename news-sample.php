@@ -96,11 +96,11 @@ $i=$server['server_id'];
 
                         if( mysql_num_rows($res2)>0) {
                          echo "server {$i} update news {$id} <br>";
-                                $sql = "UPDATE {$db_name}.{$newstable} SET`add_date` = '{$add_date}', `title_ru` = '{$title}', `textToPublication_ru` = '{$text}', `add_stamp` = {$add_stamp}, `priority`={$priority} WHERE `news_id` = {$news_id} AND `server_id` = {$i};";
+                                $sql = "UPDATE {$db_name}.{$newstable} SET`add_date` = '{$add_date}', `title` = '{$title}', `textToPublication` = '{$text}', `add_stamp` = {$add_stamp}, `priority`={$priority} WHERE `news_id` = {$news_id} AND `server_id` = {$i};";
                         }
                         else {
                             echo "server {$i } add new news {$id} <br>";
-                        $sql = "INSERT INTO {$db_name}.{$newstable} ( `add_date`,`title_ru`,`textToPublication_ru`,`add_stamp`,`news_id`,`server_id`,`priority`) VALUES ('{$add_date}','{$title}', '{$text}', {$add_stamp},  {$id},{$i},{$priority});";
+                        $sql = "INSERT INTO {$db_name}.{$newstable} ( `add_date`,`title`,`textToPublication`,`add_stamp`,`news_id`,`server_id`,`priority`) VALUES ('{$add_date}','{$title}', '{$text}', {$add_stamp},  {$id},{$i},{$priority});";
                         }
 
                            
